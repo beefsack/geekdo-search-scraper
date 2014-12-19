@@ -34,6 +34,47 @@ const (
 	columnRatings8
 	columnRatings9
 	columnRatings10
+	// Suggested player poll
+	columnPlayers1Best
+	columnPlayers1Recommended
+	columnPlayers1NotRecommended
+	columnPlayers1Result
+	columnPlayers2Best
+	columnPlayers2Recommended
+	columnPlayers2NotRecommended
+	columnPlayers2Result
+	columnPlayers3Best
+	columnPlayers3Recommended
+	columnPlayers3NotRecommended
+	columnPlayers3Result
+	columnPlayers4Best
+	columnPlayers4Recommended
+	columnPlayers4NotRecommended
+	columnPlayers4Result
+	columnPlayers5Best
+	columnPlayers5Recommended
+	columnPlayers5NotRecommended
+	columnPlayers5Result
+	columnPlayers6Best
+	columnPlayers6Recommended
+	columnPlayers6NotRecommended
+	columnPlayers6Result
+	columnPlayers7Best
+	columnPlayers7Recommended
+	columnPlayers7NotRecommended
+	columnPlayers7Result
+	columnPlayers8Best
+	columnPlayers8Recommended
+	columnPlayers8NotRecommended
+	columnPlayers8Result
+	columnPlayers9Best
+	columnPlayers9Recommended
+	columnPlayers9NotRecommended
+	columnPlayers9Result
+	columnPlayers10Best
+	columnPlayers10Recommended
+	columnPlayers10NotRecommended
+	columnPlayers10Result
 )
 
 var columns = []int{
@@ -70,6 +111,49 @@ var columns = []int{
 	columnRatings8,
 	columnRatings9,
 	columnRatings10,
+}
+
+var columnsPlayerPoll = []int{
+	columnPlayers1Best,
+	columnPlayers1Recommended,
+	columnPlayers1NotRecommended,
+	columnPlayers1Result,
+	columnPlayers2Best,
+	columnPlayers2Recommended,
+	columnPlayers2NotRecommended,
+	columnPlayers2Result,
+	columnPlayers3Best,
+	columnPlayers3Recommended,
+	columnPlayers3NotRecommended,
+	columnPlayers3Result,
+	columnPlayers4Best,
+	columnPlayers4Recommended,
+	columnPlayers4NotRecommended,
+	columnPlayers4Result,
+	columnPlayers5Best,
+	columnPlayers5Recommended,
+	columnPlayers5NotRecommended,
+	columnPlayers5Result,
+	columnPlayers6Best,
+	columnPlayers6Recommended,
+	columnPlayers6NotRecommended,
+	columnPlayers6Result,
+	columnPlayers7Best,
+	columnPlayers7Recommended,
+	columnPlayers7NotRecommended,
+	columnPlayers7Result,
+	columnPlayers8Best,
+	columnPlayers8Recommended,
+	columnPlayers8NotRecommended,
+	columnPlayers8Result,
+	columnPlayers9Best,
+	columnPlayers9Recommended,
+	columnPlayers9NotRecommended,
+	columnPlayers9Result,
+	columnPlayers10Best,
+	columnPlayers10Recommended,
+	columnPlayers10NotRecommended,
+	columnPlayers10Result,
 }
 
 var columnTitles = map[int]string{
