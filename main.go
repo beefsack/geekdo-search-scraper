@@ -87,6 +87,32 @@ func main() {
 				columnRatings9:      fmt.Sprintf("%d", userRatings[9]),
 				columnRatings10:     fmt.Sprintf("%d", userRatings[10]),
 			}
+			// Polls
+			if thing.Polls != nil {
+				for _, poll := range thing.Polls {
+					results := map[int]string{}
+					switch poll.Name {
+					case "suggested_numplayers":
+					case "suggested_playerage":
+						results, err = parseSingleResultSetPoll(poll,
+							columnAgePollFormat)
+						if err != nil {
+							stderr.Printf("Unable to parse age poll, %v", err)
+							continue
+						}
+					case "language_dependence":
+						results, err = parseSingleResultSetPoll(poll,
+							columnLanguagePollFormat)
+						if err != nil {
+							stderr.Printf("Unable to parse language poll, %v", err)
+							continue
+						}
+					}
+					for c, v := range results {
+						values[c] = v
+					}
+				}
+			}
 			if err := w.Write(Row(values)); err != nil {
 				stderr.Fatalf("Error writing row, %s", err)
 			}
