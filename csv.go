@@ -59,50 +59,40 @@ const (
 	columnPlayerPoll1Best
 	columnPlayerPoll1Recommended
 	columnPlayerPoll1NotRecommended
-	columnPlayerPoll1Result
 	columnPlayerPoll2Best
 	columnPlayerPoll2Recommended
 	columnPlayerPoll2NotRecommended
-	columnPlayerPoll2Result
 	columnPlayerPoll3Best
 	columnPlayerPoll3Recommended
 	columnPlayerPoll3NotRecommended
-	columnPlayerPoll3Result
 	columnPlayerPoll4Best
 	columnPlayerPoll4Recommended
 	columnPlayerPoll4NotRecommended
-	columnPlayerPoll4Result
 	columnPlayerPoll5Best
 	columnPlayerPoll5Recommended
 	columnPlayerPoll5NotRecommended
-	columnPlayerPoll5Result
 	columnPlayerPoll6Best
 	columnPlayerPoll6Recommended
 	columnPlayerPoll6NotRecommended
-	columnPlayerPoll6Result
 	columnPlayerPoll7Best
 	columnPlayerPoll7Recommended
 	columnPlayerPoll7NotRecommended
-	columnPlayerPoll7Result
 	columnPlayerPoll8Best
 	columnPlayerPoll8Recommended
 	columnPlayerPoll8NotRecommended
-	columnPlayerPoll8Result
 	columnPlayerPoll9Best
 	columnPlayerPoll9Recommended
 	columnPlayerPoll9NotRecommended
-	columnPlayerPoll9Result
 	columnPlayerPoll10Best
 	columnPlayerPoll10Recommended
 	columnPlayerPoll10NotRecommended
-	columnPlayerPoll10Result
 )
 
 const (
+	columnPlayerPollFormat               = "Player Poll %s %s"
 	columnPlayerPollBestFormat           = "Player Poll %s Best"
 	columnPlayerPollRecommendedFormat    = "Player Poll %s Recommended"
 	columnPlayerPollNotRecommendedFormat = "Player Poll %s Not Recommended"
-	columnPlayerPollResultFormat         = "Player Poll %s Result"
 	columnAgePollFormat                  = "Age Poll %s"
 	columnLanguagePollFormat             = "Language Poll %s"
 )
@@ -164,43 +154,33 @@ var columns = []int{
 	columnPlayerPoll1Best,
 	columnPlayerPoll1Recommended,
 	columnPlayerPoll1NotRecommended,
-	columnPlayerPoll1Result,
 	columnPlayerPoll2Best,
 	columnPlayerPoll2Recommended,
 	columnPlayerPoll2NotRecommended,
-	columnPlayerPoll2Result,
 	columnPlayerPoll3Best,
 	columnPlayerPoll3Recommended,
 	columnPlayerPoll3NotRecommended,
-	columnPlayerPoll3Result,
 	columnPlayerPoll4Best,
 	columnPlayerPoll4Recommended,
 	columnPlayerPoll4NotRecommended,
-	columnPlayerPoll4Result,
 	columnPlayerPoll5Best,
 	columnPlayerPoll5Recommended,
 	columnPlayerPoll5NotRecommended,
-	columnPlayerPoll5Result,
 	columnPlayerPoll6Best,
 	columnPlayerPoll6Recommended,
 	columnPlayerPoll6NotRecommended,
-	columnPlayerPoll6Result,
 	columnPlayerPoll7Best,
 	columnPlayerPoll7Recommended,
 	columnPlayerPoll7NotRecommended,
-	columnPlayerPoll7Result,
 	columnPlayerPoll8Best,
 	columnPlayerPoll8Recommended,
 	columnPlayerPoll8NotRecommended,
-	columnPlayerPoll8Result,
 	columnPlayerPoll9Best,
 	columnPlayerPoll9Recommended,
 	columnPlayerPoll9NotRecommended,
-	columnPlayerPoll9Result,
 	columnPlayerPoll10Best,
 	columnPlayerPoll10Recommended,
 	columnPlayerPoll10NotRecommended,
-	columnPlayerPoll10Result,
 }
 
 var columnTitles = map[int]string{
@@ -260,43 +240,33 @@ var columnTitles = map[int]string{
 	columnPlayerPoll1Best:            fmt.Sprintf(columnPlayerPollBestFormat, "1"),
 	columnPlayerPoll1Recommended:     fmt.Sprintf(columnPlayerPollRecommendedFormat, "1"),
 	columnPlayerPoll1NotRecommended:  fmt.Sprintf(columnPlayerPollNotRecommendedFormat, "1"),
-	columnPlayerPoll1Result:          fmt.Sprintf(columnPlayerPollResultFormat, "1"),
 	columnPlayerPoll2Best:            fmt.Sprintf(columnPlayerPollBestFormat, "2"),
 	columnPlayerPoll2Recommended:     fmt.Sprintf(columnPlayerPollRecommendedFormat, "2"),
 	columnPlayerPoll2NotRecommended:  fmt.Sprintf(columnPlayerPollNotRecommendedFormat, "2"),
-	columnPlayerPoll2Result:          fmt.Sprintf(columnPlayerPollResultFormat, "2"),
 	columnPlayerPoll3Best:            fmt.Sprintf(columnPlayerPollBestFormat, "3"),
 	columnPlayerPoll3Recommended:     fmt.Sprintf(columnPlayerPollRecommendedFormat, "3"),
 	columnPlayerPoll3NotRecommended:  fmt.Sprintf(columnPlayerPollNotRecommendedFormat, "3"),
-	columnPlayerPoll3Result:          fmt.Sprintf(columnPlayerPollResultFormat, "3"),
 	columnPlayerPoll4Best:            fmt.Sprintf(columnPlayerPollBestFormat, "4"),
 	columnPlayerPoll4Recommended:     fmt.Sprintf(columnPlayerPollRecommendedFormat, "4"),
 	columnPlayerPoll4NotRecommended:  fmt.Sprintf(columnPlayerPollNotRecommendedFormat, "4"),
-	columnPlayerPoll4Result:          fmt.Sprintf(columnPlayerPollResultFormat, "4"),
 	columnPlayerPoll5Best:            fmt.Sprintf(columnPlayerPollBestFormat, "5"),
 	columnPlayerPoll5Recommended:     fmt.Sprintf(columnPlayerPollRecommendedFormat, "5"),
 	columnPlayerPoll5NotRecommended:  fmt.Sprintf(columnPlayerPollNotRecommendedFormat, "5"),
-	columnPlayerPoll5Result:          fmt.Sprintf(columnPlayerPollResultFormat, "5"),
 	columnPlayerPoll6Best:            fmt.Sprintf(columnPlayerPollBestFormat, "6"),
 	columnPlayerPoll6Recommended:     fmt.Sprintf(columnPlayerPollRecommendedFormat, "6"),
 	columnPlayerPoll6NotRecommended:  fmt.Sprintf(columnPlayerPollNotRecommendedFormat, "6"),
-	columnPlayerPoll6Result:          fmt.Sprintf(columnPlayerPollResultFormat, "6"),
 	columnPlayerPoll7Best:            fmt.Sprintf(columnPlayerPollBestFormat, "7"),
 	columnPlayerPoll7Recommended:     fmt.Sprintf(columnPlayerPollRecommendedFormat, "7"),
 	columnPlayerPoll7NotRecommended:  fmt.Sprintf(columnPlayerPollNotRecommendedFormat, "7"),
-	columnPlayerPoll7Result:          fmt.Sprintf(columnPlayerPollResultFormat, "7"),
 	columnPlayerPoll8Best:            fmt.Sprintf(columnPlayerPollBestFormat, "8"),
 	columnPlayerPoll8Recommended:     fmt.Sprintf(columnPlayerPollRecommendedFormat, "8"),
 	columnPlayerPoll8NotRecommended:  fmt.Sprintf(columnPlayerPollNotRecommendedFormat, "8"),
-	columnPlayerPoll8Result:          fmt.Sprintf(columnPlayerPollResultFormat, "8"),
 	columnPlayerPoll9Best:            fmt.Sprintf(columnPlayerPollBestFormat, "9"),
 	columnPlayerPoll9Recommended:     fmt.Sprintf(columnPlayerPollRecommendedFormat, "9"),
 	columnPlayerPoll9NotRecommended:  fmt.Sprintf(columnPlayerPollNotRecommendedFormat, "9"),
-	columnPlayerPoll9Result:          fmt.Sprintf(columnPlayerPollResultFormat, "9"),
 	columnPlayerPoll10Best:           fmt.Sprintf(columnPlayerPollBestFormat, "10"),
 	columnPlayerPoll10Recommended:    fmt.Sprintf(columnPlayerPollRecommendedFormat, "10"),
 	columnPlayerPoll10NotRecommended: fmt.Sprintf(columnPlayerPollNotRecommendedFormat, "10"),
-	columnPlayerPoll10Result:         fmt.Sprintf(columnPlayerPollResultFormat, "10"),
 }
 
 // Header gets the CSV header.

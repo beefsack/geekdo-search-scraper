@@ -93,6 +93,7 @@ func main() {
 					results := map[int]string{}
 					switch poll.Name {
 					case "suggested_numplayers":
+						results = parseNumPlayersPoll(poll)
 					case "suggested_playerage":
 						results, err = parseSingleResultSetPoll(poll,
 							columnAgePollFormat)
