@@ -23,7 +23,7 @@ func AdvSearch(
 	client *geekdo.Client,
 	url string,
 	logger *log.Logger,
-) ([]geekdo.CollectionItem, error) {
+) ([]geekdo.SearchCollectionItem, error) {
 	errors := 0
 	for errors < advSearchRetries {
 		coll, err := client.AdvSearch(url)
